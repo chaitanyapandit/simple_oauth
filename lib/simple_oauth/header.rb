@@ -15,7 +15,7 @@ module SimpleOAuth
       def default_options
         {
           :nonce => OpenSSL::Random.random_bytes(16).unpack('H*')[0],
-          :signature_method => 'HMAC-SHA1',
+          :signature_method => 'HMAC-SHA256',
           :timestamp => Time.now.to_i.to_s,
           :version => '1.0',
         }
